@@ -18,3 +18,14 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+li{
+  list-style: none;
+}
+img{
+  height: 50px;
+  margin-right: 5px;
+display: inline-block;}
+h2{
+  display: inline-block;
+font-size: 50;
+margin: 0;}
