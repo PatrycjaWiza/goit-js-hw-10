@@ -9,6 +9,9 @@ var debounce = require('lodash.debounce');
 //HTML selectors & constants
 const DEBOUNCE_DELAY = 300;
 const countryList = document.querySelector('.country-list');
+const searchBal = () => {
+  searchBox.value.trim();
+};
 // input listener & its handleEvent & debounce delay
 searchBox.addEventListener(
   'input',
@@ -16,17 +19,13 @@ searchBox.addEventListener(
 );
 
 function handleSearchEvent(e) {
-  if (e.target.value === '') {
+  if (!e.target.value.trim()) {
     countryList.innerHTML = '';
   } else {
     fetchCountries()
       .then(name => renderCountryList(name))
       .catch(error => {
-        if (e.target.value === '') {
-          countryList.innerHTML = '';
-        } else {
-          return Notify.failure('Oops, there is no country with that name');
-        }
+        return Notify.failure('Oops, there is no country with that name');
       });
   }
 }
