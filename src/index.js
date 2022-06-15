@@ -1,6 +1,6 @@
 // imports
 import './css/styles.css';
-import { fetchCountries, searchBox, searchVal } from './fetchCountries';
+import { fetchCountries, searchBox } from './fetchCountries';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 //loadash library
@@ -19,7 +19,7 @@ searchBox.addEventListener(
 );
 
 function handleSearchEvent(e) {
-  if (!e.target.value.trim()) {
+  if (!searchBox.value.trim()) {
     countryList.innerHTML = '';
   } else {
     fetchCountries()

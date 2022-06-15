@@ -11,4 +11,4 @@ function fetchCountries(name) {
   });
 }
 
-export { fetchCountries, searchBox, searchVal };
+export { fetchCountries, searchBox };
