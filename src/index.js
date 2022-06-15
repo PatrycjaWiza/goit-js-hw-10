@@ -9,9 +9,7 @@ var debounce = require('lodash.debounce');
 //HTML selectors & constants
 const DEBOUNCE_DELAY = 300;
 const countryList = document.querySelector('.country-list');
-const searchBal = () => {
-  searchBox.value.trim();
-};
+
 // input listener & its handleEvent & debounce delay
 searchBox.addEventListener(
   'input',
